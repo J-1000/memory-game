@@ -10,6 +10,10 @@ body {
     background: blue;
 }
 
+.btn {
+    height: 50px;
+}
+
 .memory-game {
     width: 640px;
     height: 640px;
