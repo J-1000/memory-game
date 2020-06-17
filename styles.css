@@ -15,18 +15,20 @@ body {
 }
 
 .memory-game {
-    width: 640px;
+    width: 1280px;
     height: 640px;
     margin: auto; 
     display: flex; 
     flex-wrap: wrap; 
     border: 2px solid lime;
     perspective: 1000px;
+    display: flex;
+    justify-content: center;
 }
 
 .memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
+    width: calc(16.65% - 10px);
+    height: calc(25% - 10px);
     margin: 5px; 
     position: relative; 
     transform: scale(1); 

@@ -79,7 +79,7 @@ var interval = setInterval(timeIt, 1000);
             button.addEventListener("click", resetBoard)
             //alert('boom');
         }
-
+        
 
     }
 }
