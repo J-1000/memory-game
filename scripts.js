@@ -63,6 +63,10 @@ function flipCard() {
 
 }
 function resetBoard() {
+    console.log(hasFlippedCard, lockBoard);
+    [firstCard, secondCard] = [null, null];
+    console.log(firstCard, secondCard);
+
     counter = 0;
     document.querySelector(".memory-game").style.visibility = "visible";
     document.querySelector(".btn").style.visibility = "hidden";
@@ -124,6 +128,6 @@ function shuffle() {
         card.style.order = randomPos;
     }); 
 }
-//shuffle();
+shuffle();
 
 document.getElementById("timer").style.color = "sandybrown";
