@@ -8,29 +8,42 @@
 body {
     height: 100vh;
     display: flex; 
-    background: #f9aa64c5;
     display: flex;
     flex-direction: column;
+    background-color: darkblue;
+    background-position: center;
+    background-size: cover;
 }
 
 .top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: limegreen;
 }
 
+h1 {
+    color: #2445cc;
+}
 
 .btn {
-    height: 50px;
-    background-color: #123C69;
-    color: #EEE2DC;
+    height: 40px;
+    margin-top: 5px;
+    background-color: #f79a4ec2;
+    color: #2445cc;
+    font-weight: bold;
+    padding: 0 50px 0 50px;
 }
 
 #timer {
-    font-size: xx-large
+    font-size: 2em;
+    color: #f79a4ec2;
+    font-weight: bolder;
     }
     
+.textSpan {
     
+}
     
 
 
@@ -40,7 +53,6 @@ body {
     margin: auto; 
     display: flex; 
     flex-wrap: wrap; 
-    
     perspective: 1000px;
     display: flex;
     justify-content: center;
@@ -80,7 +92,7 @@ body {
     padding: 20px;
     position: absolute; 
     border-radius: 5px;
-    background-image: url("img/bryan-garces-N0JDgKOLLhU-unsplash.jpg");
+    background-color: white;
     background-position: center;
     background-size: cover;
     backface-visibility: hidden;

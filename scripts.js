@@ -1,10 +1,15 @@
 const cards = document.querySelectorAll('.memory-card');
-
+let interval;
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard; 
+let countMatch = 0;
 
 function flipCard() {
+    console.log(timer.innerHTML);
+    if(!timer.innerHTML) {
+        startTimer();
+    }
     if (lockBoard) return;
     if (this === firstCard) return;
 
@@ -24,7 +29,23 @@ function flipCard() {
                 //it's a match!
                 firstCard.removeEventListener('click', flipCard);
                 secondCard.removeEventListener('click', flipCard);
+                countMatch = document.querySelectorAll(".flip").length;
+                console.log(countMatch);
                 //resetBoard();
+                if(countMatch >= 24) {
+                    console.log("win");
+                    clearInterval(interval);
+                    timer.innerHTML = "";
+                    timeLeft = 60;
+                    document.querySelector(".memory-game").style.visibility = "hidden";
+                    let button = document.querySelector(".btn");
+                    let textSpan = document.querySelector(".text");
+                    button.style.visibility = "visible";
+                    textSpan.style.visibility = "visible";
+                    textSpan.innerHTML = "Win";
+                    button.addEventListener("click", resetBoard)
+
+                }
             }   else {
                 //not a match
                 lockBoard = true;
@@ -45,11 +66,11 @@ function resetBoard() {
     counter = 0;
     document.querySelector(".memory-game").style.visibility = "visible";
     document.querySelector(".btn").style.visibility = "hidden";
+    document.querySelector(".text").style.visibility = "hidden";
     cards.forEach(function(card) {
         card.classList.remove('flip');
         card.addEventListener('click', flipCard)
     })
-    startTimer();
     shuffle();
 } 
 
@@ -57,14 +78,16 @@ function resetBoard() {
 cards.forEach(card => card.addEventListener('click', flipCard)); 
 
 var counter = 0;
-var timeLeft = 3;
+var timeLeft = 60;
 
 function startTimer() {
     var timer = select('#timer');
     timer.html(timeLeft - counter);
 
 
-var interval = setInterval(timeIt, 1000);
+interval = setInterval(timeIt, 1000);
+
+
 
     
     function timeIt() {
@@ -72,11 +95,17 @@ var interval = setInterval(timeIt, 1000);
         timer.html(timeLeft - counter);
         if (counter == timeLeft) {
             clearInterval(interval);
-            timer.html("GAME OVER")
+            
+            clearInterval(interval);
+            timer.html("");
+            timeLeft = 60;
 
             document.querySelector(".memory-game").style.visibility = "hidden";
             let button = document.querySelector(".btn");
+            let textSpan = document.querySelector(".text");
             button.style.visibility = "visible";
+            textSpan.style.visibility = "visible";
+            textSpan.innerHTML = "Game Over";
             button.addEventListener("click", resetBoard)
             //alert('boom');
         }
@@ -87,7 +116,7 @@ var interval = setInterval(timeIt, 1000);
 
 function setup() {
     noCanvas();
-    startTimer();
+    //startTimer();
 }
 function shuffle() {
     cards.forEach(card => {
@@ -96,3 +125,5 @@ function shuffle() {
     }); 
 }
 //shuffle();
+
+document.getElementById("timer").style.color = "sandybrown";
