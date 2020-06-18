@@ -57,7 +57,7 @@ function resetBoard() {
 cards.forEach(card => card.addEventListener('click', flipCard)); 
 
 var counter = 0;
-var timeLeft = 10;
+var timeLeft = 3;
 
 function startTimer() {
     var timer = select('#timer');
@@ -66,12 +66,13 @@ function startTimer() {
 
 var interval = setInterval(timeIt, 1000);
 
+    
     function timeIt() {
         counter++;
         timer.html(timeLeft - counter);
         if (counter == timeLeft) {
             clearInterval(interval);
-            timer.html("Game Over")
+            timer.html("GAME OVER")
 
             document.querySelector(".memory-game").style.visibility = "hidden";
             let button = document.querySelector(".btn");

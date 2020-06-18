@@ -7,106 +7,110 @@
     <link rel="stylesheet" href="styles.css"/> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="top">
+    <h1>MEMORY GAME</h1>
+    <button class = "btn" style="visibility: hidden">PLAY AGAIN</button>
     <p id = "timer"></p>
-    <button class = "btn" style="visibility: hidden">Play again</button>
+    </div>
     <section class="memory-game">
         <div class="memory-card" data-framework="aurelia">
+            <img class="front-face" src= "" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="aurelia">
+            <img class="front-face" src= "" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="vue">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="vue">
+            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="angular">
+            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="angular">
+            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="ember">
+            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="ember">
+            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="backbone">
+            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="backbone">
+            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="react">
+            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
+            <div class="back-face"></div> 
+        </div>
+        <div class="memory-card" data-framework="react">
+            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
+            <div class="back-face"></div> 
         </div>
         <div class="memory-card" data-framework="aurelia">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="vue">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="vue">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="angular">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="angular">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="ember">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="ember">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="backbone">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="backbone">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="react">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="react">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div> 
         </div>
         <div class="memory-card" data-framework="aurelia">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
-        </div>
-        <div class="memory-card" data-framework="aurelia">
-            <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="vue">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="vue">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="angular">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="angular">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="ember">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="ember">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="backbone">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="backbone">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="react">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
         <div class="memory-card" data-framework="react">
             <img class="front-face" src= "img/1280px-Texas_Longhorns_logo.svg.png" alt="card front-face">
-            <img class="back-face" src= "img/tam-logo.png" alt="JS badge"> 
+            <div class="back-face"></div>  
         </div>
     </section>
     <script src="scripts.js"></script>

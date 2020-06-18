@@ -2,17 +2,37 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     height: 100vh;
     display: flex; 
-    background: blue;
+    background: #f9aa64c5;
+    display: flex;
+    flex-direction: column;
 }
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
 .btn {
     height: 50px;
+    background-color: #123C69;
+    color: #EEE2DC;
 }
+
+#timer {
+    font-size: xx-large
+    }
+    
+    
+    
+
 
 .memory-game {
     width: 1280px;
@@ -20,7 +40,7 @@ body {
     margin: auto; 
     display: flex; 
     flex-wrap: wrap; 
-    border: 2px solid lime;
+    
     perspective: 1000px;
     display: flex;
     justify-content: center;
@@ -45,13 +65,24 @@ body {
     transform: rotateY(180deg);
 }
 
-.front-face, .back-face {
+.front-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute; 
+    border-radius: 5px; 
+    backface-visibility: hidden;
+}
+
+.back-face {
     width: 100%;
     height: 100%;
     padding: 20px;
     position: absolute; 
     border-radius: 5px;
-    background: #1c7ccc; 
+    background-image: url("img/bryan-garces-N0JDgKOLLhU-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
     backface-visibility: hidden;
 }
 
