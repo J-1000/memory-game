@@ -10,7 +10,11 @@ body {
     display: flex; 
     display: flex;
     flex-direction: column;
-    background-color: darkblue;
+    background-image:
+    linear-gradient(
+      to bottom, 
+      #8134af, #dd2a7b, #f58529, #feda77
+    );
     background-position: center;
     background-size: cover;
 }
@@ -19,11 +23,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: limegreen;
+    margin-bottom: 10px;
 }
 
 h1 {
-    color: #2445cc;
+    color: white;
 }
 
 .btn {
@@ -37,7 +41,7 @@ h1 {
 
 #timer {
     font-size: 2em;
-    color: #f79a4ec2;
+    color: white;
     font-weight: bolder;
     }
     
@@ -50,7 +54,7 @@ h1 {
 .memory-game {
     width: 1280px;
     height: 640px;
-    margin: auto; 
+    margin: auto;
     display: flex; 
     flex-wrap: wrap; 
     perspective: 1000px;
@@ -66,6 +70,7 @@ h1 {
     transform: scale(1); 
     transform-style: preserve-3d;
     transition: transform .5s;
+    border-radius: 5px;
 }
 
 .memory-card:active {
