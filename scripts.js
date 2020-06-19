@@ -128,6 +128,6 @@ function shuffle() {
         card.style.order = randomPos;
     }); 
 }
-shuffle();
+//shuffle();
 
-document.getElementById("timer").style.color = "sandybrown";
+document.getElementById("timer").style.color = "white";

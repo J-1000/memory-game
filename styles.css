@@ -46,7 +46,7 @@ h1 {
     }
     
 .textSpan {
-    
+    color: white;
 }
     
 
@@ -88,6 +88,8 @@ h1 {
     padding: 20px;
     position: absolute; 
     border-radius: 5px; 
+    background-position: center;
+    background-size: cover;
     backface-visibility: hidden;
 }
 
